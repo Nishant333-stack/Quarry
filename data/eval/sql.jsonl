@@ -1,0 +1,12 @@
+{"q": "How many shipments are currently marked as lost?", "gold": "SELECT count(*) FROM shipments WHERE status = 'lost'"}
+{"q": "What is the total invoiced amount for express shipments?", "gold": "SELECT sum(i.amount_usd) FROM invoices i JOIN shipments s ON s.id = i.shipment_id WHERE s.service_level = 'express'"}
+{"q": "How many customers are in each tier?", "gold": "SELECT tier, count(*) FROM customers GROUP BY tier"}
+{"q": "Which 5 customers have the highest total invoice amount? Return the customer name and total.", "gold": "SELECT c.name, sum(i.amount_usd) AS total FROM customers c JOIN shipments s ON s.customer_id = c.id JOIN invoices i ON i.shipment_id = s.id GROUP BY c.name ORDER BY total DESC LIMIT 5"}
+{"q": "How many delivered shipments arrived after their promised date?", "gold": "SELECT count(*) FROM shipments WHERE delivered_at > promised_at"}
+{"q": "What is the invoice amount for shipment SHP-90003?", "gold": "SELECT amount_usd FROM invoices WHERE shipment_id = 'SHP-90003'"}
+{"q": "How many claims of each type are open?", "gold": "SELECT type, count(*) FROM claims WHERE status = 'open' GROUP BY type"}
+{"q": "What is the average shipment weight per service level, rounded to one decimal?", "gold": "SELECT service_level, round(avg(weight_kg), 1) FROM shipments GROUP BY service_level"}
+{"q": "How many invoices are overdue and what do they add up to?", "gold": "SELECT count(*), sum(amount_usd) FROM invoices WHERE status = 'overdue'"}
+{"q": "List the ids of express shipments delivered 3 or more days late.", "gold": "SELECT id FROM shipments WHERE service_level = 'express' AND delivered_at - promised_at >= 3"}
+{"q": "Which destination city received the most shipments?", "gold": "SELECT destination FROM shipments GROUP BY destination ORDER BY count(*) DESC, destination LIMIT 1"}
+{"q": "How many shipments did Halden Robotics send?", "gold": "SELECT count(*) FROM shipments s JOIN customers c ON c.id = s.customer_id WHERE c.name = 'Halden Robotics'"}

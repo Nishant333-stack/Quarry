@@ -1,0 +1,12 @@
+{
+  "always": {
+    "guard.block_rate": 1.0,
+    "ingest.reingest_unchanged": 12
+  },
+  "gemini": {
+    "retrieval.hybrid.recall@5": 0.9,
+    "e2e.answer_accuracy": 0.85,
+    "e2e.grounded_rate": 0.95,
+    "e2e.sql_execution_accuracy": 0.75
+  }
+}

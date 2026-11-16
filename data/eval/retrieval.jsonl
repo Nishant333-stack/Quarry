@@ -1,0 +1,48 @@
+{"q": "How many days after delivery can a customer report damaged goods?", "source": "claims-policy.md", "section": "Filing deadlines", "must": ["14 days"]}
+{"q": "When do we consider a package to have gone missing?", "source": "claims-policy.md", "section": "Filing deadlines", "must": ["10 days"]}
+{"q": "What proof does a customer need to send for a broken item?", "source": "claims-policy.md", "section": "Evidence required", "must": ["photograph"]}
+{"q": "What is the most we will pay per kilogram on a claim?", "source": "claims-policy.md", "section": "Liability limits", "must": ["25"]}
+{"q": "How fast are approved claims paid out to enterprise accounts?", "source": "claims-policy.md", "section": "Payout timeline", "must": ["5 business days"]}
+{"q": "Reasons a damage claim gets rejected", "source": "claims-policy.md", "section": "Exclusions", "must": ["packaging"]}
+{"q": "What refund does a customer get if an express parcel arrives one day late?", "source": "delivery-guarantee.md", "section": "Late delivery credits", "must": ["25%"]}
+{"q": "Is there any compensation for a late economy shipment?", "source": "delivery-guarantee.md", "section": "Late delivery credits", "must": ["no"]}
+{"q": "Deadline for asking for a late delivery credit", "source": "delivery-guarantee.md", "section": "Requesting a credit", "must": ["30 days"]}
+{"q": "Does bad weather void the on-time promise?", "source": "delivery-guarantee.md", "section": "Exclusions", "must": ["weather"]}
+{"q": "Which service tiers come with a money-back guarantee and what are their transit times?", "source": "delivery-guarantee.md", "section": "Service levels", "must": ["Express", "Standard"]}
+{"q": "What interest do we charge on unpaid bills?", "source": "billing-and-invoicing.md", "section": "Late payment", "must": ["1.5%"]}
+{"q": "How long does a customer have to contest a charge on their bill?", "source": "billing-and-invoicing.md", "section": "Disputing an invoice", "must": ["21 days"]}
+{"q": "When is an account put on credit hold?", "source": "billing-and-invoicing.md", "section": "Late payment", "must": ["60 days"]}
+{"q": "Standard payment terms", "source": "billing-and-invoicing.md", "section": "Payment terms", "must": ["net 30"]}
+{"q": "Is there a fee for paying a large invoice by card?", "source": "billing-and-invoicing.md", "section": "Accepted payment methods", "must": ["2.9%"]}
+{"q": "What paperwork is mandatory for shipping overseas?", "source": "customs-documentation.md", "section": "Required documents", "must": ["commercial invoice", "packing list"]}
+{"q": "How many digits of the HS code are required?", "source": "customs-documentation.md", "section": "HS codes", "must": ["6"]}
+{"q": "What does storage cost while a shipment is stuck at the border?", "source": "customs-documentation.md", "section": "Customs holds", "must": ["35"]}
+{"q": "What is the DDP disbursement fee?", "source": "customs-documentation.md", "section": "Duties and taxes", "must": ["2%"]}
+{"q": "Can I send a laptop battery by express?", "source": "dangerous-goods.md", "section": "What Meridian accepts", "must": ["never"]}
+{"q": "Maximum charge level for loose lithium-ion cells", "source": "dangerous-goods.md", "section": "Lithium batteries", "must": ["30%"]}
+{"q": "Do you transport radioactive material?", "source": "dangerous-goods.md", "section": "Prohibited items", "must": ["Class 7"]}
+{"q": "Fine for hazardous items that were not declared", "source": "dangerous-goods.md", "section": "Surcharge and penalties", "must": ["500"]}
+{"q": "How heavy can one box be before it has to go on a pallet?", "source": "packaging-standards.md", "section": "Cartons", "must": ["30 kg"]}
+{"q": "Maximum pallet height", "source": "packaging-standards.md", "section": "Pallets", "must": ["180 cm"]}
+{"q": "How should glassware be packed?", "source": "packaging-standards.md", "section": "Fragile items", "must": ["double-boxed"]}
+{"q": "Annual spend needed to qualify for the top customer tier", "source": "customer-tiers.md", "section": "Tier thresholds", "must": ["250,000"]}
+{"q": "What perks do priority customers get?", "source": "customer-tiers.md", "section": "Priority tier", "must": ["5%"]}
+{"q": "How long does a customer keep their tier after spend drops?", "source": "customer-tiers.md", "section": "Tier changes", "must": ["90-day"]}
+{"q": "What is the largest credit a front-line agent can sign off?", "source": "support-escalation.md", "section": "Approval limits for credits", "must": ["200"]}
+{"q": "Who has to approve a credit of 1,500 dollars?", "source": "support-escalation.md", "section": "Approval limits for credits", "must": ["finance"]}
+{"q": "When must a ticket be handed over to a supervisor?", "source": "support-escalation.md", "section": "When to escalate to a human", "must": ["legal"]}
+{"q": "First response time for a P2 ticket", "source": "support-escalation.md", "section": "Priority levels", "must": ["2 business hours"]}
+{"q": "How many times will the driver try to deliver?", "source": "returns-and-redelivery.md", "section": "Delivery attempts", "must": ["3"]}
+{"q": "Daily depot storage charge after the free period", "source": "returns-and-redelivery.md", "section": "Holding and storage", "must": ["4"]}
+{"q": "Cost to fix a wrong address after pickup", "source": "returns-and-redelivery.md", "section": "Address corrections", "must": ["22"]}
+{"q": "How long do we keep proof-of-delivery photos?", "source": "data-privacy.md", "section": "Retention", "must": ["18 months"]}
+{"q": "How quickly must we tell customers about a data breach?", "source": "data-privacy.md", "section": "Incident notification", "must": ["72 hours"]}
+{"q": "Do we store credit card numbers?", "source": "data-privacy.md", "section": "Access controls", "must": ["never stored"]}
+{"q": "What counts as a temperature excursion?", "source": "cold-chain.md", "section": "Excursions", "must": ["30 consecutive minutes"]}
+{"q": "Claim deadline for spoiled refrigerated goods", "source": "cold-chain.md", "section": "Claims for temperature damage", "must": ["7 days"]}
+{"q": "How often does the cold chain logger take a reading?", "source": "cold-chain.md", "section": "Monitoring", "must": ["10 minutes"]}
+{"q": "Fee for a package longer than 150 cm", "source": "surcharges.md", "section": "Oversize and overweight", "must": ["60"]}
+{"q": "Do you deliver on Sundays?", "source": "surcharges.md", "section": "Weekend delivery", "must": ["not offered"]}
+{"q": "Liftgate charge", "source": "surcharges.md", "section": "Liftgate and inside delivery", "must": ["75"]}
+{"q": "How is the fuel surcharge percentage set?", "source": "surcharges.md", "section": "Fuel surcharge", "must": ["diesel"]}
+{"q": "Which fees are waived for enterprise accounts?", "source": "surcharges.md", "section": "Waivers", "must": ["residential", "liftgate"]}
